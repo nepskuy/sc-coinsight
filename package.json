@@ -1,0 +1,49 @@
+{
+    "name": "sc-coinsight",
+    "version": "1.0.0",
+    "description": "Smart contracts for CoinSight on-chain research assistant",
+    "main": "index.js",
+    "scripts": {
+        "compile": "hardhat compile",
+        "test": "hardhat test",
+        "deploy:local": "hardhat run scripts/deploy.js --network localhost",
+        "deploy:sepolia": "hardhat run scripts/deploy.js --network sepolia",
+        "deploy:mumbai": "hardhat run scripts/deploy.js --network polygonMumbai",
+        "verify:sepolia": "hardhat verify --network sepolia",
+        "verify:mumbai": "hardhat verify --network polygonMumbai",
+        "node": "hardhat node",
+        "clean": "hardhat clean",
+        "coverage": "hardhat coverage"
+    },
+    "keywords": [
+        "blockchain",
+        "ethereum",
+        "hardhat",
+        "smart-contracts",
+        "defi",
+        "ai-agents"
+    ],
+    "author": "CoinSight Team",
+    "license": "MIT",
+    "devDependencies": {
+        "@nomicfoundation/hardhat-chai-matchers": "^2.0.0",
+        "@nomicfoundation/hardhat-ethers": "^3.0.0",
+        "@nomicfoundation/hardhat-network-helpers": "^1.0.0",
+        "@nomicfoundation/hardhat-toolbox": "^5.0.0",
+        "@nomicfoundation/hardhat-verify": "^2.0.0",
+        "@typechain/ethers-v6": "^0.5.0",
+        "@typechain/hardhat": "^9.0.0",
+        "@types/chai": "^4.2.0",
+        "@types/mocha": ">=9.1.0",
+        "chai": "^4.2.0",
+        "hardhat": "^2.22.0",
+        "hardhat-gas-reporter": "^2.2.0",
+        "solidity-coverage": "^0.8.0",
+        "typechain": "^8.3.0"
+    },
+    "dependencies": {
+        "@openzeppelin/contracts": "^5.1.0",
+        "dotenv": "^16.4.0",
+        "ethers": "^6.13.0"
+    }
+}
