@@ -1,33 +1,207 @@
-node_modules
+# ============================================
+# SENSITIVE FILES - NEVER COMMIT THESE!
+# ============================================
+
+# Environment variables (ALL variants)
 .env
-coverage
-coverage.json
-typechain
-typechain-types
+.env.local
+.env.development
+.env.development.local
+.env.test
+.env.test.local
+.env.production
+.env.production.local
+.env*.local
 
-# Hardhat files
-cache
-artifacts
+# Private keys & Wallet secrets
+.secret
+secrets.json
+private-keys/
+*.privatekey
+mnemonic.txt
+keystore/
 
-# Deployments (keep in git but ignore sensitive info)
+# Deployment addresses (sensitive)
 deployments/*.local.json
+deployments/localhost/
+deployments/hardhat/
 
-# Gas reports
+# API Keys
+*.apikey
+api-keys.json
+
+# AWS/Cloud credentials
+.aws/
+aws_credentials
+
+# ============================================
+# NODE MODULES & DEPENDENCIES
+# ============================================
+
+node_modules/
+.pnp
+.pnp.*
+
+# Lock files (optional - keep if you want consistency)
+# package-lock.json
+# yarn.lock
+
+# ============================================
+# HARDHAT FILES
+# ============================================
+
+# Hardhat cache & artifacts
+cache/
+artifacts/
+/cache
+/artifacts
+
+# Type chain
+typechain/
+typechain-types/
+
+# Hardhat Network fork data
+.hardhat_network_fork/
+
+# ============================================
+# TESTING & COVERAGE
+# ============================================
+
+# Coverage files
+coverage/
+coverage.json
+.coverage_artifacts/
+.coverage_cache/
+.coverage_contracts/
+
+# Test artifacts
+test-results/
+
+# ============================================
+# GAS & PERFORMANCE REPORTS
+# ============================================
+
 gas-report.txt
+gas-report.json
+.gas-snapshot
 
-# IDE
-.vscode
-.idea
+# ============================================
+# DEPLOYED CONTRACTS
+# ============================================
+
+# Keep deployment info but ignore local/sensitive
+# deployments/  # Uncomment jika mau ignore semua
+deployments/*.secret.json
+deployments/*.backup
+deployed-addresses.json
+
+# ============================================
+# BUILD & COMPILATION
+# ============================================
+
+# Build outputs
+build/
+dist/
+out/
+
+# Flattened contracts
+flattened/
+*.flattened.sol
+
+# ============================================
+# IDE & EDITORS
+# ============================================
+
+# VSCode
+.vscode/
+!.vscode/extensions.json
+!.vscode/settings.json
+*.code-workspace
+
+# WebStorm / IntelliJ
+.idea/
+*.iml
+*.iws
+*.ipr
+
+# Sublime Text
+*.sublime-project
+*.sublime-workspace
+
+# Vim
 *.swp
 *.swo
 *~
+.vim/
 
-# OS
+# ============================================
+# OS FILES
+# ============================================
+
+# macOS
 .DS_Store
-Thumbs.db
+.AppleDouble
+.LSOverride
+._*
+.Spotlight-V100
+.Trashes
 
-# Logs
+# Windows
+Thumbs.db
+Thumbs.db:encryptable
+ehthumbs.db
+ehthumbs_vista.db
+Desktop.ini
+$RECYCLE.BIN/
+
+# Linux
+*~
+.directory
+.fuse_hidden*
+
+# ============================================
+# LOGS
+# ============================================
+
+# Log files
 *.log
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+lerna-debug.log*
+.pnpm-debug.log*
+
+# Logs directories
+logs/
+*.log.*
+
+# ============================================
+# TEMPORARY FILES
+# ============================================
+
+*.tmp
+*.temp
+*.swp
+*.swo
+*.bak
+*.backup
+*.old
+
+# ============================================
+# MISC
+# ============================================
+
+# Documentation artifacts (optional)
+# GITHUB_PUSH.md
+
+# Local configuration
+local-config.js
+local.config.js
+
+# Cache
+.cache/
+.eslintcache
+
+# Scripts output
+scripts/output/
+*.output.json
